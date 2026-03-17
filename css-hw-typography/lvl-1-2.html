@@ -1,0 +1,57 @@
+<!-- Рівень 1: Базовий (Фундамент тексту та кольору)
+Фокус: Підключення шрифтів, одиниці виміру rem та базові кольори.
+
+2. «Гнучка типографіка»: Задайте для тегу html базовий розмір шрифту font-size: 16px. Для заголовка встановіть розмір 1.5rem, а для тексту 1rem. Зробіть міжрядковий інтервал тексту зручним для читання (line-height: 1.6).
+-->
+
+<!doctype html>
+<html lang="uk">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <title>LVL 1.2</title>
+        <link
+            rel="preconnect"
+            href="https://fonts.googleapis.com"
+        />
+        <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossorigin
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Reggae+One&family=Underdog&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            html {
+                font-size: 16px;
+            }
+            .article-card {
+                line-height: 1.6;
+            }
+            .article-card h2 {
+                font-size: 1.5rem;
+                font-family: 'Reggae One', serif;
+            }
+            .article-card p {
+                font-size: 1rem;
+                font-family: 'Underdog', serif;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="article-card">
+            <h2>Заголовок</h2>
+            <p>Короткий опис...</p>
+            <a
+                href="https://kostyl.dev/html-css/css-typography"
+                target="_blank"
+                >Читати далі</a
+            >
+        </div>
+    </body>
+</html>

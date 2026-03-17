@@ -1,0 +1,62 @@
+<!-- Рівень 1: Базовий (Фундамент тексту та кольору)
+Фокус: Підключення шрифтів, одиниці виміру rem та базові кольори.
+
+3. «Перші фарби (HSL)»: Замість нудного чорного кольору тексту, використайте формат HSL, щоб зробити його м'якшим: color: hsl(0, 0%, 20%) для тексту та hsl(220, 90%, 50%) для посилання. Приберіть стандартне підкреслення у посилання (text-decoration).
+-->
+
+<!doctype html>
+<html lang="uk">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <title>LVL 1.3</title>
+        <link
+            rel="preconnect"
+            href="https://fonts.googleapis.com"
+        />
+        <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossorigin
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Reggae+One&family=Underdog&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            html {
+                font-size: 16px;
+            }
+            .article-card {
+                line-height: 1.6;
+            }
+            .article-card h2 {
+                font-size: 1.5rem;
+                font-family: 'Reggae One', serif;
+            }
+            .article-card p {
+                color: hsl(0, 0%, 20%);
+                font-size: 1rem;
+                font-family: 'Underdog', serif;
+            }
+            .article-card a {
+                color: hsl(220, 90%, 50%);
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="article-card">
+            <h2>Заголовок</h2>
+            <p>Короткий опис...</p>
+            <a
+                href="https://kostyl.dev/html-css/css-typography"
+                target="_blank"
+                >Читати далі</a
+            >
+        </div>
+    </body>
+</html>

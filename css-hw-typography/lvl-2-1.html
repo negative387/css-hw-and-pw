@@ -1,0 +1,67 @@
+<!-- Рівень 2: Логіка та Композиція (Фони та Градієнти)
+Фокус: Взаємодія фонів, Box Model та прозорості.
+
+1. «Форма картки (Box Model + Background)»: Дайте вашій .article-card білий колір фону (background-color: #ffffff), ширину 350px, внутрішні відступи padding: 24px та закруглені кути border-radius: 12px. Щоб картка виділялася, додайте їй легку тінь (box-shadow). Зверніть увагу, як Box Model працює разом із фоном. 
+-->
+
+<!doctype html>
+<html lang="uk">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <title>LVL 2.1</title>
+        <link
+            rel="preconnect"
+            href="https://fonts.googleapis.com"
+        />
+        <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossorigin
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Reggae+One&family=Underdog&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            html {
+                font-size: 16px;
+            }
+            .article-card {
+                width: 350px;
+                padding: 24px;
+                border-radius: 12px;
+                background-color: #ffffff;
+                box-shadow: 7px 5px 5px gray;
+                line-height: 1.6;
+            }
+            .article-card h2 {
+                font-size: 1.5rem;
+                font-family: 'Reggae One', serif;
+            }
+            .article-card p {
+                color: hsl(0, 0%, 20%);
+                font-size: 1rem;
+                font-family: 'Underdog', serif;
+            }
+            .article-card a {
+                color: hsl(220, 90%, 50%);
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="article-card">
+            <h2>Заголовок</h2>
+            <p>Короткий опис...</p>
+            <a
+                href="https://kostyl.dev/html-css/css-typography"
+                target="_blank"
+                >Читати далі</a
+            >
+        </div>
+    </body>
+</html>
