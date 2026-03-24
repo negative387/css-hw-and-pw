@@ -1,0 +1,49 @@
+<!-- 
+Рівень 1: Базовий (Фундамент та Осі)
+Фокус: Створення flex-контейнера, керування напрямком та проміжками.
+
+1. «Гнучкий старт»: Створіть HTML-структуру: контейнер <section class="catalog">, всередині якого розмістіть три <article class="product-card">. У кожній картці додайте заголовок, короткий абзац тексту та кнопку "Купити". Задайте контейнеру .catalog властивість display: flex;. Подивіться, як картки автоматично стали в один ряд.
+2. «Дихання макету (Gap)»: Замість того, щоб задавати карткам margin, додайте до контейнера .catalog властивість gap: 24px;. Перевірте, як з'явилися ідеально рівні відступи між картками, але не по краях контейнера.
+3. «Зміна осей»: Спробуйте змінити напрямок головної осі контейнера за допомогою flex-direction: column;. Картки стануть одна під одною. Після перевірки поверніть значення на row (або просто видаліть рядок, оскільки row діє за замовчуванням).
+-->
+
+<!doctype html>
+<html lang="uk">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <title>lvl 1</title>
+        <style>
+            .catalog {
+                /* lvl 1.1: */
+                display: flex;
+                /* lvl 1.2: */
+                gap: 24px;
+                /* lvl 1.3: */
+                flex-direction: column;
+            }
+        </style>
+    </head>
+    <body>
+        <section class="catalog">
+            <article class="product-card">
+                <h2>Клавіатура</h2>
+                <p>5%</p>
+                <button>Купити</button>
+            </article>
+            <article class="product-card">
+                <h2>Монітор</h2>
+                <p>24K OLED 4444гц</p>
+                <button>Купити</button>
+            </article>
+            <article class="product-card">
+                <h2>Навушники</h2>
+                <p>0.1–120 000 Гц</p>
+                <button>Купити</button>
+            </article>
+        </section>
+    </body>
+</html>

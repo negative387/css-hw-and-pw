@@ -1,0 +1,85 @@
+<!-- 
+Рівень 3: Архітектура (Вкладений Flexbox та Патерни)
+Фокус: Вкладені флекс-контейнери та патерн "Пружина" (margin: auto).
+
+1. «Проблема різного контенту»: Зробіть так, щоб у першій картці тексту було дуже мало (один рядок), а в другій — дуже багато (п'ять рядків). Ви помітите проблему: висота карток однакова (завдяки align-items: stretch у батька), але кнопки "Купити" «висять» на різній висоті, одразу під текстом. Це виглядає неохайно.
+2. «Картка як контейнер»: Щоб вирішити це, ми робимо саму картку .product-card флекс-контейнером! Додайте їй:
+.product-card {
+    display: flex;
+    flex-direction: column; /* Елементи картки йдуть зверху вниз */
+}
+3. «Магічна пружина (margin-top: auto)»: Тепер застосуйте до кнопки "Купити" (або до блоку, що містить ціну і кнопку) магічне правило: margin-top: auto;. Цей патерн змусить кнопку поглинути весь вільний вертикальний простір над нею і завжди притискатися до самого низу картки, створюючи ідеальну лінію кнопок у каталозі!
+-->
+
+<!doctype html>
+<html lang="uk">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <title>lvl 3</title>
+        <style>
+            body {
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .catalog {
+                display: flex;
+                gap: 24px;
+                flex-wrap: wrap;
+            }
+            /*lvl 3.2: */
+            .product-card {
+                display: flex;
+                flex-direction: column;
+            }
+            /*lvl 3.3: */
+            .button {
+                margin-top: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <section class="catalog">
+            <article class="product-card">
+                <h2>Клавіатура</h2>
+                <p>5%</p>
+                <button class="button">Купити</button>
+            </article>
+            <article class="product-card">
+                <h2>Монітор</h2>
+                <p>багато тексту</p>
+                <p>Багато тексту</p>
+                <p>Багато Тексту</p>
+                <p>БАГАТО ТЕКСТУ</p>
+                <p>ДУЖЕ БАГАТО ТЕКСТУ</p>
+                <button class="button">Купити</button>
+            </article>
+            <article class="product-card">
+                <h2>Навушники</h2>
+                <p>0.1–120 000 Гц</p>
+                <button class="button">Купити</button>
+            </article>
+            <article class="product-card">
+                <h2>Картопля</h2>
+                <p>Смачна</p>
+                <button class="button">Купити</button>
+            </article>
+            <article class="product-card">
+                <h2>ГТА 6</h2>
+                <p>289 Євро</p>
+                <button class="button">Предзамовлення</button>
+            </article>
+            <article class="product-card">
+                <h2>Не придумав</h2>
+                <p>не придумав...</p>
+                <button class="button">Купити</button>
+            </article>
+        </section>
+    </body>
+</html>

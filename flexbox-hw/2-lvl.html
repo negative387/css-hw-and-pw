@@ -1,0 +1,73 @@
+<!-- 
+Рівень 2: Логіка та Вирівнювання (Адаптивність)
+Фокус: Перенесення елементів (flex-wrap) та вирівнювання (justify-content, align-items).
+
+1. «Розумне перенесення»: Продублюйте картки в HTML, щоб їх стало 6. Ви побачите, що вони стиснулися і, можливо, вилізли за межі екрану. Додайте контейнеру .catalog властивість flex-wrap: wrap;. Тепер картки, які не влазять, будуть м'яко переноситися на новий рядок.
+2. «Ідеальне центрування екрану»: Зробіть так, щоб весь ваш каталог стояв рівно по центру сторінки. Для цього задайте тегу body (або обгортці каталогу) min-height: 100vh;, display: flex;, flex-direction: column;. Потім використайте justify-content: center; та align-items: center;.
+3. «Розподіл простору»: Поверніться до .catalog і поекспериментуйте з вирівнюванням карток у рядку: задайте justify-content: space-between;, а потім justify-content: center;. Залиште варіант center.
+-->
+
+<!doctype html>
+<html lang="uk">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <title>lvl 2</title>
+        <style>
+            /* lvl 2.2: */
+            body {
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .catalog {
+                display: flex;
+                gap: 24px;
+                /* lvl 2.1: */
+                flex-wrap: wrap;
+                /* lvl 2.3 (експеремент): 
+                justify-content: space-between;
+                */
+            }
+        </style>
+    </head>
+    <body>
+        <section class="catalog">
+            <article class="product-card">
+                <h2>Клавіатура</h2>
+                <p>5%</p>
+                <button>Купити</button>
+            </article>
+            <article class="product-card">
+                <h2>Монітор</h2>
+                <p>24K OLED 4444гц</p>
+                <button>Купити</button>
+            </article>
+            <article class="product-card">
+                <h2>Навушники</h2>
+                <p>0.1–120 000 Гц</p>
+                <button>Купити</button>
+            </article>
+            <article class="product-card">
+                <h2>Картопля</h2>
+                <p>Смачна</p>
+                <button>Купити</button>
+            </article>
+            <article class="product-card">
+                <h2>ГТА 6</h2>
+                <p>289 Євро</p>
+                <button>Предзамовлення</button>
+            </article>
+            <article class="product-card">
+                <h2>Не придумав</h2>
+                <p>не придумав...</p>
+                <button>Купити</button>
+            </article>
+        </section>
+    </body>
+</html>
