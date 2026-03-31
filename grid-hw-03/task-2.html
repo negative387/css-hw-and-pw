@@ -1,0 +1,79 @@
+<!--
+Завдання 2
+Реалізувати html-сторінку з чатом.
+Вимоги:
+- текст повідомлень розташовується посередині, а аватари та імена користувачів по боках;
+- повідомлення різних користувачів мають різний фон;
+- ім'я користувача і час повідомлення вирівнюється по тій стороні, де знаходиться повідомлення.
+-->
+
+<!--
+Я довго робив це завдання та раз 30 його перероблював. Навіть ChatGPT та Gemini не допомагали, бо фігню не потрібну робили.
+-->
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Task 2</title>
+    <link
+      rel="stylesheet"
+      href="task-2.css"
+    />
+  </head>
+  <body>
+    <div class="chat">
+      <!-- 1 повідомлення: -->
+      <div class="message-left">
+        <div class="user">
+          <div class="info">
+            <h3>Anie Smith</h3>
+            <p>4 hours ago</p>
+          </div>
+          <img
+            src="https://img.icons8.com/?size=48&id=CSToOclMmlIh&format=png"
+            alt="Аватар"
+          />
+        </div>
+        <div class="text">
+          <p>Hello</p>
+        </div>
+      </div>
+      <!-- 2 повідомлення: -->
+      <div class="message-right">
+        <div class="text">
+          <p>What's up nigga</p>
+        </div>
+        <div class="user">
+          <img
+            src="https://img.icons8.com/?size=48&id=fL3iXxhEu0CB&format=png"
+            alt="Аватар"
+          />
+          <div class="info">
+            <h3>Big Smoke</h3>
+            <p>4 hours ago</p>
+          </div>
+        </div>
+      </div>
+      <!-- 3 повідомлення: -->
+      <div class="message-left">
+        <div class="user">
+          <div class="info">
+            <h3>Anie Smith</h3>
+            <p>3 hours ago</p>
+          </div>
+          <img
+            src="https://img.icons8.com/?size=48&id=CSToOclMmlIh&format=png"
+            alt="Аватар"
+          />
+        </div>
+        <div class="text">
+          <p>I'm chill dawg 🤙</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

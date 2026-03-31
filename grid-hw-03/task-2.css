@@ -1,0 +1,61 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgb(244, 253, 255);
+  padding: 20px;
+}
+
+.chat {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.message-left,
+.message-right {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  gap: 20px;
+}
+
+.text {
+  display: flex;
+  flex-grow: 1;
+  grid-column: 2;
+  padding: 15px 25px;
+}
+
+.message-left .user {
+  grid-column: 1;
+  justify-self: end;
+  text-align: right;
+}
+
+.message-right .user {
+  grid-column: 3;
+  justify-self: start;
+  text-align: left;
+}
+
+.message-left .text {
+  background: rgb(240, 168, 247);
+  border-radius: 15px 15px 15px 0px;
+}
+
+.message-right .text {
+  background: rgb(168, 205, 247);
+  border-radius: 15px 15px 0px 15px;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
