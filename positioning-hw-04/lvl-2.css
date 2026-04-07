@@ -1,0 +1,51 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: #1e1e1e;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.cart-icon {
+  position: relative;
+  font-size: 24px;
+}
+
+.badge {
+  position: absolute;
+  top: 0;
+  right: 50px;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+}
+
+.has-dropdown {
+  /* 1. Цей елемент має стати системою координат для випадаючого меню */
+  position: relative;
+}
+
+.dropdown-menu {
+  /* 1. Зробіть меню абсолютним */
+  position: absolute;
+  /* 2. Відступіть 100% зверху (щоб меню було рівно під текстом) та 0 зліва */
+  top: 100%;
+  left: 0%;
+  /* 3. Додайте фон, рамку та ширину (наприклад, 200px) */
+  background: rgb(185, 182, 228);
+  border: 3px solid gray;
+  display: none; /* Ховаємо за замовчуванням */
+  width: 120px;
+  flex-direction: column;
+}
+
+/* 4. Напишіть селектор, який змінює display на flex для .dropdown-menu, 
+   коли користувач наводить мишу на .has-dropdown */
+.has-dropdown:hover .dropdown-menu {
+  display: flex;
+}

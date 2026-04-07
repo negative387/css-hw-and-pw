@@ -1,0 +1,31 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: #1e1e1e;
+  color: white;
+  /* 1. Зробіть шапку "липкою" до верхнього краю (top: 0): */
+  position: sticky;
+  top: 0;
+  /* 2. Додайте їй z-index, щоб вона перекривала текст при скролі: */
+  z-index: 100;
+}
+
+.cart-icon {
+  /* 1. Зробіть цей контейнер точкою відліку для бейджа: */
+  position: relative;
+  font-size: 24px;
+}
+
+.badge {
+  /* 1. Вирвіть бейдж з потоку (абсолютне позиціонування) */
+  position: absolute;
+  /* 2. Поставте його у правий верхній кут іконки кошика (top, right): */
+  top: 0;
+  right: 50px;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+}

@@ -1,0 +1,72 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: #1e1e1e;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.cart-icon {
+  position: relative;
+  font-size: 24px;
+}
+
+.badge {
+  position: absolute;
+  top: 0;
+  right: 50px;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+}
+
+.has-dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  background: rgb(185, 182, 228);
+  border: 3px solid gray;
+  display: none;
+  width: 200px;
+  flex-direction: column;
+}
+
+.has-dropdown:hover .dropdown-menu {
+  display: flex;
+}
+
+.modal-overlay {
+  /* 1. Зробіть так, щоб вікно фіксувалося відносно вікна браузера: */
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* 2. Розтягніть його на весь екран (top: 0, left: 0, width: 100vw, height: 100vh): */
+  inset: 0;
+  /* 3. Задайте напівпрозорий темний фон (rgba): */
+  background: rgba(0, 0, 0, 0.514);
+  /* 4. Встановіть z-index такий, щоб він був БІЛЬШИМ, ніж у вашої .navbar: */
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 40px;
+  color: black;
+  /* Візуальне оформлення: тіні, flex для форми тощо: */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  border-radius: 20px;
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.411);
+}
