@@ -1,0 +1,115 @@
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(34, 197, 94, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+  }
+}
+
+.background-container {
+  background: linear-gradient(45deg, #f3ec78, #af4261);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-card {
+  /*3 - Застосуйте анімацію slideUpFade: тривалість 0.6s, функція ease-out, forwards */
+  animation: slideUpFade 0.6s ease-out forwards;
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  /*1 - Додайте м'яку, багатошарову тінь (наприклад: одну маленьку темнішу, іншу велику і прозору) */
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.1),
+    0 3px 5px rgba(0, 0, 0, 0.07);
+  /*2 - Змініть фон картки на напівпрозорий білий (наприклад, rgba(255, 255, 255, 0.2)) */
+  background-color: rgba(255, 255, 255, 0.2);
+  /*2 - Додайте ефект розмиття фону: backdrop-filter: blur(15px) */
+  backdrop-filter: blur(15px);
+  /*2 - Додайте тонку білу рамку: border: 1px solid rgba(255, 255, 255, 0.5) */
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/*3 - Застосуйте ту ж анімацію до елементів .avatar, .name, .role, .btn-follow */
+/*3 - Зробіть їх прозорими за замовчуванням (opacity: 0) */
+/*3 - Використайте animation-delay: .avatar (0.2s), .name (0.4s), .btn-follow (0.6s) */
+
+.role {
+  opacity: 0;
+  animation: slideUpFade 0.6s ease-out forwards;
+}
+
+.name {
+  opacity: 0;
+  animation: slideUpFade 0.6s ease-out forwards;
+  animation-delay: 0.4s;
+  /*1 - Додайте легкий text-shadow для заголовка, щоб надати йому об'єму */
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.avatar {
+  opacity: 0;
+  animation: slideUpFade 0.6s ease-out forwards;
+  animation-delay: 0.2s;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  /*2 - Використайте filter, щоб зробити фото повністю чорно-білим (grayscale) */
+  /*2 - Використайте filter: drop-shadow(...), щоб додати тінь самому зображенню, а не його контейнеру */
+  filter: grayscale() drop-shadow(0 3px 9px rgba(0, 0, 0, 0.3));
+  /*2 - Додайте transition на властивість filter */
+  transition: filter 0.5s ease;
+}
+
+.avatar:hover {
+  /*2 - Приберіть чорно-білий фільтр (зробіть grayscale 0%) */
+  filter: grayscale(0%);
+}
+
+.btn-follow {
+  opacity: 0;
+  animation: slideUpFade 0.6s ease-out forwards;
+  animation-delay: 0.6s;
+  background: #3b82f6;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  /*1 - Увімкніть плавний перехід (transition) для властивостей transform та background-color (тривалість 0.3s) */
+  transition:
+    transform 0.3s ease,
+    background-color 0.5s ease;
+}
+
+.btn-follow:hover {
+  background: #2563eb;
+  /*1 - Використайте transform: translateY, щоб кнопка "підстрибнула" на 3px вгору */
+  transform: translateY(-3px);
+}
+
+.online-dot {
+  width: 12px;
+  height: 12px;
+  background-color: #22c55e;
+  border-radius: 50%;
+  /*3 - Застосуйте анімацію pulseGlow: тривалість 2s, нескінченно (infinite) */
+  animation: pulseGlow 2s infinite;
+}
