@@ -1,0 +1,51 @@
+/*Трішки вкрав стиль з костиля :)*/
+
+.cards-all {
+  display: grid;
+  grid-template-columns: 1fr;
+  font-family: system-ui, sans-serif;
+  padding: 1rem;
+  gap: 1rem;
+  box-sizing: border-box;
+  background: rgb(255, 252, 252);
+  border-radius: 12px;
+}
+
+@media (min-width: 480px) {
+  .cards-all {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .cards-all {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+.card {
+  background: white;
+  padding: 1.25rem;
+  border-radius: 15px;
+  border: 1px solid rgb(231, 236, 243);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.card-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.card h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1rem;
+  color: rgb(39, 46, 58);
+}
+
+.card p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: rgb(88, 108, 136);
+  line-height: 1.5;
+}
