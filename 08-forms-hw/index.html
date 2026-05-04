@@ -1,0 +1,192 @@
+<!-- Я майже не здурів після цього дз (35% - я | 35% - kostyl | 30% - ChatGPT) -->
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Submit practical work</title>
+  </head>
+  <body>
+    <a
+      href="#main-content"
+      class="skip-link"
+      >Перейти до основного вмісту</a
+    >
+    <header>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
+        alt="Логотип сайту"
+        width="50"
+      />
+      <nav aria-label="Головне меню">
+        <ol>
+          <li><a href="#personal">Особисті дані</a></li>
+          <li><a href="#timetable">Розклад</a></li>
+          <li><a href="#documents">Документи</a></li>
+          <li><a href="#settings">Налаштування</a></li>
+        </ol>
+      </nav>
+    </header>
+    <main id="main-content">
+      <aside aria-label="Пам'ятка">
+        Ви розробляєте frontend-частину нової сторінки для нашої освітньої платформи. На цій сторінці студенти будуть
+        завантажувати свої готові лабораторні роботи, залишати посилання на репозиторії та писати короткий фідбек. Ваше
+        завдання — написати чистий, семантичний HTML-каркас без використання CSS. Браузер та скринрідери мають ідеально
+        розуміти структуру сторінки.
+      </aside>
+      <section>
+        <h2>Форма здачі роботи</h2>
+        <details>
+          <summary>Часті помилки при здачі</summary>
+          <ul>
+            <li>Помилка 1</li>
+            <li>Помилка 2</li>
+            <li>Помилка 3</li>
+            <li>Помилка 4</li>
+          </ul>
+        </details>
+        <form
+          method="post"
+          enctype="multipart/form-data"
+        >
+          <fieldset id="personal">
+            <legend>Особисті дані</legend>
+            <!-- ПІБ -->
+            <div>
+              <label for="full-name">ПІБ:</label>
+              <input
+                type="text"
+                id="full-name"
+                name="full_name"
+                autocomplete="name"
+                required
+                placeholder="Прізвище Ім'я По батькові"
+              />
+            </div>
+            <!-- Email -->
+            <div>
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                autocomplete="email"
+                required
+                placeholder="timcoock@apple.com"
+              />
+            </div>
+          </fieldset>
+          <fieldset id="details">
+            <legend>Деталі завдання</legend>
+            <!-- Навчальна дисципліна -->
+            <div>
+              <label for="subject">Навчальна дисципліна:</label>
+              <select
+                id="subject"
+                name="subject"
+                required
+              >
+                <optgroup label="Програмування">
+                  <option value="c++">C++</option>
+                  <option value="js">JavaScript</option>
+                </optgroup>
+
+                <optgroup label="Мережі">
+                  <option value="tcpip">TCP/IP</option>
+                  <option value="cisco">Cisco</option>
+                </optgroup>
+
+                <optgroup label="Бази даних">
+                  <option value="mysql">MySQL</option>
+                  <option value="postgres">PostgreSQL</option>
+                </optgroup>
+              </select>
+            </div>
+            <!-- GitHub -->
+            <div>
+              <label for="website">Ваш GitHub:</label>
+              <input
+                type="url"
+                id="website"
+                name="website"
+                autocomplete="url"
+                placeholder="https://github.com/..."
+              />
+            </div>
+            <!-- Файл звіту -->
+            <div>
+              <label for="report">Файл звіту:</label>
+              <input
+                type="file"
+                id="report"
+                name="report"
+                accept=".pdf,.docx,.zip"
+                required
+              />
+            </div>
+          </fieldset>
+          <fieldset id="feedback">
+            <legend>Фідбек</legend>
+            <!-- Складність -->
+            <div>
+              <p>Складність завдання:</p>
+
+              <input
+                type="radio"
+                id="ease-option"
+                name="option"
+                value="ease"
+              />
+              <label for="ease-option">Легко</label>
+
+              <input
+                type="radio"
+                id="fine-option"
+                name="option"
+                value="fine"
+              />
+              <label for="fine-option">Нормально</label>
+
+              <input
+                type="radio"
+                id="difficult-option"
+                name="option"
+                value="difficult"
+              />
+              <label for="difficult-option">Дуже складно</label>
+            </div>
+            <!-- Коментар -->
+            <div>
+              <label for="comment">Коментар до завдання:</label>
+              <textarea
+                id="comment"
+                name="comment"
+                rows="4"
+                maxlength="3000"
+                placeholder="..."
+              ></textarea>
+            </div>
+          </fieldset>
+        </form>
+      </section>
+    </main>
+    <!-- Підтвердження -->
+    <dialog id="confirm-dialog">
+      <form method="dialog">
+        <p>Підтвердити відправку?</p>
+        <button value="confirm">Підтвердити</button>
+        <button value="cancel">Скасувати</button>
+      </form>
+    </dialog>
+    <footer>
+      <p>Зв'язок з викладачем:</p>
+      <address>
+        <a href="mailto:timcoock@apple.com">timcoock@apple.com</a>
+        <a href="https://t.me">Telegram</a>
+      </address>
+    </footer>
+  </body>
+</html>
